@@ -1,0 +1,94 @@
+.ballet-font {
+  font-family: "Ballet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.yrsa-light {
+  font-family: "Yrsa", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.yrsa-regular {
+  font-family: "Yrsa", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.yrsa-bold {
+  font-family: "Yrsa", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.welcome {
+    text-align: center;
+    margin-top: 1px;
+    padding-top: 1px;
+}
+
+/* work in progress it looks really bad rn
+supposed to look like glowing ... */
+.text-glow {
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: .4px;
+    -webkit-text-stroke-color: black;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #d7b1bb
+}
+
+h1 {
+    text-align: center;
+    font-family: "Ballet", cursive;
+    font-size: 50px;
+    margin-bottom: 1px;
+}
+
+body {
+    background-color: #ffeff3;
+    font-family: "Yrsa", serif;
+} 
+.container {
+    display: flex;
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    height: auto;
+    border: 2px double rgb(241, 209, 209);
+    border-radius: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+.box {
+    background-color: #fffcfd;
+    border-radius: 15px;
+    margin: 20px;
+}
+#digicam-widget {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px;
+}
+.sidebar {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: #fff9fb;
+  /* when 3 values: top, right/left, bottom */
+  box-shadow: -3px -3px 7px white,
+              3px 3px 5px #ceced1,
+              inset -3px -3px 7px white,
+              inset 3px 3px 5px #ceced1;
+}
