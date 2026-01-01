@@ -22,6 +22,58 @@
   font-weight: 700;
   font-style: normal;
 }
+.gg-close {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+}
+.gg-close::after,
+.gg-close::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: 1px;
+}
+.gg-close::after {
+  transform: rotate(-45deg);
+}
+.gg-menu {
+  transform: scale(var(--ggs, 1));
+  display: inline-flex;
+}
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 3px;
+  background: currentColor;
+}
+.gg-menu::after,
+.gg-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+}
+.gg-menu::after {
+  top: 6px;
+}
+
 .welcome {
     text-align: center;
     margin-top: 1px;
@@ -50,11 +102,11 @@ h1 {
 body {
     background-color: #ffeff3;
     font-family: "Yrsa", serif;
+    color:rgb(80, 38, 32);
 } 
 .container {
     display: flex;
     position: relative;
-    min-height: 400px;
     width: 100%;
     height: auto;
     border: 2px double rgb(241, 209, 209);
@@ -63,6 +115,18 @@ body {
     align-items: center;
     flex-wrap: wrap;
     align-content: space-evenly;
+}
+
+.parent {
+  display: flex;
+}
+
+.leftside {
+  width: auto;
+  position: relative;
+}
+.rightside {
+position: relative;
 }
 .box {
     background-color: #fffcfd;
@@ -82,7 +146,7 @@ body {
 .sidebar {
   position: relative;
   top: 0;
-  right: 0;
+  left: -100%;
   width: 300px;
   height: 100vh;
   background: #fff9fb;
@@ -91,4 +155,44 @@ body {
               3px 3px 5px #ceced1,
               inset -3px -3px 7px white,
               inset 3px 3px 5px #ceced1;
+  transition: all 0.3s ease;
+}
+.sidebar .title {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sidebar .title .logo {
+  font-size: 27px;
+  font-weight: 600;
+  color: rgb(80, 38, 32);
+}
+label {
+  font-size: 17px;
+  color:rgb(80, 38, 32);
+  box-shadow: -3px -3px 7px white,
+              3px 3px 5px #ceced1;
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.menu {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+label:hover {
+  box-shadow: inset -3px -3px 7px white,
+              inset 3px 3px 5px #ceced1;
+  color:rgb(80, 38, 32);
+}
+#check {
+  display: none;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+
 }
