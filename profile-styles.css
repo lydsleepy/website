@@ -97,6 +97,7 @@ h1 {
     font-family: "Ballet", cursive;
     font-size: 50px;
     margin-bottom: 1px;
+    position: static;
 }
 
 body {
@@ -123,10 +124,11 @@ body {
 
 .leftside {
   width: auto;
-  position: relative;
+  position: fixed;
 }
 .rightside {
-position: relative;
+  position: relative;
+  padding-left: 50px;
 }
 .box {
     background-color: #fffcfd;
@@ -167,6 +169,7 @@ position: relative;
   color: rgb(80, 38, 32);
 }
 label {
+  display: flex;
   font-size: 17px;
   color:rgb(80, 38, 32);
   box-shadow: -3px -3px 7px white,
@@ -174,8 +177,8 @@ label {
   height: 37px;
   width: 37px;
   border-radius: 50%;
-  text-align: center;
-  line-height: 37px;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -184,6 +187,18 @@ label {
   left: 15px;
   top: 15px;
 }
+
+/* moodboard */
+.logo {
+  padding-top: 17px;
+  text-align: left;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
 label:hover {
   box-shadow: inset -3px -3px 7px white,
               inset 3px 3px 5px #ceced1;
