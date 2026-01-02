@@ -11,10 +11,22 @@
     </head>
     <body>
         <div class="parent"> <!-- parent container for everything -->
-            <header>
+            <header class="header">
                     <h1>⋆ Lydia Huang ⋆</h1>
                     <p class="welcome">⋆｡˚✴︎⋆ take a look inside my <text>brain</text> ⋆✴︎˚｡⋆</p>
             </header>
+            <div class="rightside"> <!-- right side -->
+                <main>
+                    <section class="container">
+                        <div> <!-- digicam -->
+                            <img src="assets/digicam-widget.png" id="digicam-widget">
+                        </div>                
+                        <div class="box">
+                    
+                        </div>
+                    </section>
+                </main>
+            </div>
             <div class="leftside"> <!-- sidebar (left side) -->
                 <input type="checkbox" id="check">
                 <label class="button menu" for="check"><i class="gg-menu"></i></label>
@@ -24,39 +36,6 @@
                         <label class="button close" for="check"><i class="gg-close"></i></label>
                     </div>
                 </div>
-            </div>
-            <div class="rightside"> <!-- right side -->
-                <main>
-                    <section class="container">
-                        <div> <!-- digicam of me -->
-                            <img src="assets/digicam-widget.png" id="digicam-widget">
-                        </div>                
-                        <div class="box" id="hobbies">
-                            <h2>my hobbies ⭑.ᐟ</h2>
-                            <ul>
-                                <li>video games!!</li>
-                                <li>reading [books and manhwa]</li>
-                                <li>tech ^_^</li>
-                                <li>gym and fitness</li>
-                            </ul>
-                        </div>
-                        <div class="box">
-                            
-                        </div>
-                    </section>
-                    <section>
-                        <h2>let's <a href="https://www.linkedin.com/in/jialelydiahuang">connect</a> ⋆˚꩜｡</h2>
-                        <form>
-                            <label for="fullname">Full name:</label><br>
-                            <input type="text" id="fullname" name="fullname"><br>
-                            <label for="email">Email:</label><br>
-                            <input type="text" id="email" name="email"><br>
-                            <p>
-                                <input type="submit" value="Submit">
-                            </p>    
-                        </form>
-                    </section>
-                </main>
             </div>
         </div>
     </body>
